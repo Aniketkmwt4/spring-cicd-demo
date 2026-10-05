@@ -25,3 +25,11 @@ jobs:
         run: |
           chmod +x mvnw
           ./mvnw clean package
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: spring-boot-app
+          path: target/*.jar
+         
+
